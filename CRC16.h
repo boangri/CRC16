@@ -11,10 +11,10 @@
 class CRC16
 {
     public:
-		CRC16(void);
+		CRC16(int pin);
 		unsigned short crc(byte* data, unsigned short cnt);
-		void func(void);
     private:
+		int _pin;
 
 };
 

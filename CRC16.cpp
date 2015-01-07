@@ -67,8 +67,9 @@ byte auchCRCLo[] = {
 0x43, 0x83, 0x41, 0x81, 0x80, 0x40
 } ;
 
-CRC16::CRC16()
+CRC16::CRC16(int pin)
 {
+	_pin = pin;
 }
 
 unsigned short CRC16::crc(byte* data, unsigned short cnt)
@@ -85,8 +86,4 @@ unsigned short CRC16::crc(byte* data, unsigned short cnt)
 	}
 
 	return (uchCRCLo << 8 | uchCRCHi);
-}
-
-void func()
-{
 }
